@@ -17,14 +17,12 @@ body {
     rgba(49, 64, 131, 1) 35%,
     rgb(244, 166, 132) 60%,
     rgb(244, 210, 132) 70%,
-    rgb(233, 234, 243) 80%,
-    rgb(146, 211, 232) 100%
+    rgb(225, 227, 243) 80%,
+    rgb(135, 207, 231) 100%
   );
   background-position: top;
   background-size: 300vh 100%;
   background-repeat: no-repeat;
-  animation: sky linear;
-  animation: parallax linear;
 }
 
 header {
@@ -59,9 +57,6 @@ header {
   height: 100vh;
   width: 100vw;
   opacity: 1;
-  animation: meadow linear;
-  animation-timeline: scroll();
-  animation-timing-function: linear;
 }
 
 main {
@@ -105,13 +100,8 @@ h2 {
 .moon {
   height: 50px;
   position: absolute;
-  /* top: 10vh;
-  left: -95vw; */
-  animation: moonset linear;
-  offset-path: ellipse(120% 50% at -75% 40vh);
-  offset-distance: 0%;
-  offset-rotate: 0deg;
-  animation-timeline: scroll();
+  top: 10vh;
+  left: -95vw;
 }
 
 .sun {
@@ -123,11 +113,34 @@ h2 {
   position: absolute;
   top: 300px;
   right: 400px;
-  offset-path: ellipse(85% 60% at 135% 46vh);
-  offset-distance: 0%;
-  offset-rotate: 0deg;
-  animation: sunrise linear;
-  animation-timeline: scroll();
+}
+
+@supports (animation-timeline: scroll()) {
+  body {
+    animation: sky linear;
+  }
+
+  .sun {
+    offset-path: ellipse(85% 60% at 135% 46vh);
+    offset-distance: 0%;
+    offset-rotate: 0deg;
+    animation: sunrise linear;
+    animation-timeline: scroll();
+  }
+
+  .moon {
+    animation: moonset linear;
+    offset-path: ellipse(120% 50% at -75% 40vh);
+    offset-distance: 0%;
+    offset-rotate: 0deg;
+    animation-timeline: scroll();
+  }
+
+  .image-dark {
+    animation: meadow linear;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+  }
 }
 
 @keyframes sunrise {
@@ -145,10 +158,6 @@ h2 {
     background-color: rgba(249, 249, 247, 0.9);
     box-shadow: 0px 0px 15px 20px rgba(245, 233, 172, 0.3);
   }
-}
-
-footer {
-  min-height: 20vh;
 }
 
 @keyframes moonset {
@@ -175,46 +184,3 @@ footer {
     background-position: bottom;
   }
 }
-
-/* @keyframes parallax {
-  25% {
-    background: linear-gradient(
-      180deg,
-      rgb(10, 1, 27) 0%,
-      rgb(60, 25, 127) 22%,
-      rgb(143, 88, 244) 100%
-    );
-  }
-
-  80% {
-    background: linear-gradient(
-      180deg,
-      rgb(112, 187, 236) 0%,
-      rgb(211, 224, 234) 22%,
-      rgb(222, 190, 145) 100%
-    );
-  }
-  100% {
-    background: linear-gradient(
-      180deg,
-      rgb(6, 146, 240) 0%,
-      rgb(165, 212, 243) 22%,
-      rgb(246, 246, 247) 100%
-    );
-  }
-} */
-
-/* @keyframes cloud {
-  to {
-    transform: translateX(-30vw);
-  }
-} */
-
-/* .cloud {
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: -10vw;
-  animation: cloud linear;
-  animation-timeline: scroll();
-} */
