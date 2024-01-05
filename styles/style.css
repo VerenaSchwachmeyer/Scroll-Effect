@@ -27,14 +27,14 @@ body {
 
 header {
   width: 100vw;
-  height: 100svh;
+  height: 100%;
   position: fixed;
   top: 0;
   z-index: 1;
 }
 
 .container {
-  height: 300vh;
+  height: 100%;
   width: 100%;
   background: transparent;
 }
@@ -62,7 +62,7 @@ header {
 main {
   font-family: sans-serif;
   position: relative;
-  top: -100svh;
+  top: -100dvh;
   z-index: 2;
   background-color: transparent;
   width: 100vw;
