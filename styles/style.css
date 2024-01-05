@@ -27,7 +27,7 @@ body {
 
 header {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -44,7 +44,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 3;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   opacity: 1;
 }
@@ -54,7 +54,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 4;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   opacity: 1;
 }
@@ -62,7 +62,7 @@ header {
 main {
   font-family: sans-serif;
   position: relative;
-  top: -100vh;
+  top: -100svh;
   z-index: 2;
   background-color: transparent;
   width: 100vw;
