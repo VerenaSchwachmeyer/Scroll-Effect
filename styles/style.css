@@ -73,6 +73,15 @@ main {
   overflow-x: hidden;
 }
 
+footer {
+  width: 96%;
+  position: relative;
+
+  z-index: 5;
+  font-size: 0.7em;
+  padding: 10px;
+}
+
 h1,
 h2,
 p {
